@@ -1,0 +1,70 @@
+@import '~bootstrap/scss/bootstrap';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Mulish', sans-serif;
+  font-size: 20px;
+  background: url(../img/1026345.jpg) center no-repeat;
+}
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+#form{
+  margin: 40px;
+  padding: 20px;
+  width: 400px;
+  background-color: rgba(209, 198, 183, 0.247);
+}
+label {
+  margin: 5px 0;
+}
+input{
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+span{
+  font-size: 14px;
+}
+textarea{
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+#button{
+  border-radius: 10px;
+  background: #a73484;
+  width: 150px;
+  margin: auto;
+}
+.message__error {
+  color: #ff0000;
+  display: none;
+}
+.message__success{
+    color:#0f9248;
+    display: none;
+}
+
+
+.enable-validation input:invalid + .message__error {
+  display: block;
+}
+.enable-validation input:valid ~ .message__success {
+  display: block;
+}
+.enable-validation input:invalid{
+  border: 1px solid red;
+}
+.enable-validation input:valid{
+  border: 1px solid seagreen;
+}
+.enable-validation:invalid button[type="submit"] {
+  opacity: 0.6;
+  pointer-events: none;
+}
